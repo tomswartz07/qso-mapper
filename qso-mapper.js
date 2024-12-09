@@ -212,6 +212,22 @@ function removeQso(qso) {
 	}
 }
 
+/* addMarkerforQth - add a marker to the map for a given operating location */
+function addMarkerForQth(qth) {
+        var latlon = latLonForQso(qth);
+        if (latlon == null) {
+                return null;
+        }
+
+	var [latitude, longitude] = latlon;
+	var popupText = '<div class="qth">' +
+		'<h1>' + qth.call + '</h1><hr/>' +
+		'</div>';
+
+	marker = createMarker(latitude, longitude, popupText);
+	return marker;
+}
+
 /* addMarkerForQso - add a marker to the map for a given QSO */
 function addMarkerForQso(qso) {
 	var latlon = latLonForQso(qso);
