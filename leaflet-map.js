@@ -114,7 +114,7 @@ function createQTHMarker(latlong, popupText) {
 	 	popupAnchor:  [0, -16] // point from which the popup should open relative to the iconAnchor
 	 });
         var [latitude, longitude] = latlong.split(',');
-	var marker = L.marker([latitude, longitude], {icon: blueMarkerSmall});
+	var marker = L.marker([latitude, longitude], {icon: blueMarkerSmall, zIndexOffset: 1000});
 	
 	marker.addTo(_markerFeatureGroup)
 		.bindPopup(popupText);
