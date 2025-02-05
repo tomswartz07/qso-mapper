@@ -40,7 +40,5 @@ jobs:
             linux/arm64/v8
           push: true
           tags: |
-            tomswartz07/qso-mapper:latest
-            tomswartz07/qso-mapper:${{github.ref_name}}
             ghcr.io/tomswartz07/qso-mapper:latest
             ghcr.io/tomswartz07/qso-mapper:${{github.ref_name}}
